@@ -25,7 +25,7 @@ const Productpage2 = (props) => {
     const linkToUpdateBid = (data) => {
         console.log('data')
         console.log(data);
-        const url = 'http://localhost:3000/bidding/create';
+        const url = 'https://mybidbackend.herokuapp.com/bidding/create';
         axios.post(url, data).then(resp => {
             console.log('Data')
             console.log(resp.data)

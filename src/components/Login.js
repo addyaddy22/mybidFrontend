@@ -22,14 +22,14 @@ function Form() {
             email: document.getElementById('username').value,
             password: document.getElementById('password').value
         }
-        axios.post('http://localhost:3000/login', request).then(resp => {
+        axios.post('https://mybidbackend.herokuapp.com/login', request).then(resp => {
             alert(resp.data.message)
             console.log(resp.data.message)
             if (resp.data.message === 'Successful') {
                 localStorage.setItem("authenticated", true);
                 console.log(localStorage);
                 console.log('Working')
-                axios.get('http://localhost:3000/images', { mode: 'no-cors' }).then(resp => {
+                axios.get('https://mybidbackend.herokuapp.com/images', { mode: 'no-cors' }).then(resp => {
                     console.log(resp.data.message)
                     navigate("/landingpage", { props: resp.data.message });
 
@@ -42,7 +42,7 @@ function Form() {
                 localStorage.setItem("authenticated", true);
                 console.log(localStorage);
                 console.log('Working')
-                axios.get('http://localhost:3000/images', { mode: 'no-cors' }).then(resp => {
+                axios.get('https://mybidbackend.herokuapp.com/images', { mode: 'no-cors' }).then(resp => {
                     console.log(resp.data.message)
                     navigate("/adminhome", { props: resp.data.message });
 
