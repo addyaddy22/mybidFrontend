@@ -1,13 +1,13 @@
 import React from 'react'
 
 function ConfigPage() {
-  return (
-    <div>
+    return (
         <div>
-            <h1>Configure the Auto Bidding</h1>
+            <div>
+                <h1>Configure the Auto Bidding</h1>
                 <h2>Maximum Bid Amount</h2>
-                    <p>An example of bid is an.Bid is defined as command or to offer a certain sum of money for something.</p>
-                    <p>amount of money offered to purchase a house. Bid is defined as command or to offer a certain sum of money for something.</p>
+                <p>An example of bid is an.Bid is defined as command or to offer a certain sum of money for something.</p>
+                <p>amount of money offered to purchase a house. Bid is defined as command or to offer a certain sum of money for something.</p>
 
                 <div>
                     <button className='dark'>$</button>
@@ -24,8 +24,8 @@ function ConfigPage() {
                 <div>
                     <button className='secondary'>Save</button>
                 </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 export default ConfigPage

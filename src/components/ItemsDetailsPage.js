@@ -2,9 +2,7 @@ import './styles/sideBar.css'
 import Navbar from './Navbar'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-// import Image from '../../../backend/public/assets'
-// import { imagez } from '../images'
-// import * as ALL from '../images'
+
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { useRoutes } from 'react-router-dom';
@@ -16,7 +14,7 @@ function ItemsDetailsPage() {
   const [datares, setdatares] = useState([])
 
   useEffect(() => {
-    const url = 'https://mybidbackend.herokuapp.com/images';
+    const url = 'https://mybidbackend.herokuapp.com/products';
     axios.get(url).then(resp => {
       console.log('ITS all Here')
       console.log(resp.data)
@@ -52,10 +50,11 @@ function ItemsDetailsPage() {
                 <div className='col-md-4'>
                   <div className="card" >
                     <div className="overflow">
-                      <img src={`/images/${data.image}`} alt="image1" className="card-img-top img" style={{ width: '100%', height: 'auto' }} />
+                      <img src={`/images/${data.image}`} alt="image1" className='img' />
                       <div className="card-body text-dark">
                         <h4 className="card-title">{data.name}</h4>
                         <p card-text text-secondary>grab yours</p>
+                        <p card-text text-secondary>Price: $ {data.price}</p>
                         <a onClick={() => linkToBid(data)} className="btn btn-primary">BID</a>
                       </div>
 

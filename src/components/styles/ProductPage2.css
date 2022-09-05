@@ -20,7 +20,12 @@
     background-color: #eee;
 }
 
-.img {
+/* .img {
     max-width: 100vw;
 
+} */
+img {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
 }
