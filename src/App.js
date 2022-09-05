@@ -14,6 +14,7 @@ import ItemsDetailsPage from './components/ItemsDetailsPage';
 import Productpage2 from './components/Productpage2';
 import ConfigPage from './components/ConfigPage';
 import AdminView from './components/AdminView';
+import AddEditItem from './components/AddEditItem'
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
             <Route element={<AdminHome />} path="/adminhome"></Route>
             <Route element={<AdminView />} path="/adminview"></Route>
             <Route element={<ItemsDetailsPage />} path="/landingpage"></Route>
-            <Route element={<Productpage2 />} path="/productpage2/">
-            </Route>
+            <Route element={<Productpage2 />} path="/productpage2/"></Route>
+            <Route element={<AddEditItem />} path="/addItem"></Route>
             <Route element={<ConfigPage />} path="configpage"></Route>
           </Route>
         </Routes>

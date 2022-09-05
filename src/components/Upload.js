@@ -12,7 +12,7 @@ const Upload = () => {
         formData.append("profile-upload", selectedFile);
         event.preventDefault()
         console.log(formData)
-        axios.post('http://localhost:3000/profileUpload', {
+        axios.post('https://mybidbackend.herokuapp.com/profileUpload', {
             formData
         }).then(() => {
             console.log('Success');
@@ -25,7 +25,7 @@ const Upload = () => {
     //   console.log('here')
     //   const response = axios({
     //     method: "post",
-    //     url: "http://localhost:3000/profileUpload",
+    //     url: "https://mybidbackend.herokuapp.com/profileUpload",
     //     data: formData,
     //     headers: { "Content-Type": "multipart/form-data" },
     //   });

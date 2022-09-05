@@ -16,7 +16,7 @@ function ItemsDetailsPage() {
   const [datares, setdatares] = useState([])
 
   useEffect(() => {
-    const url = 'http://localhost:3000/images';
+    const url = 'https://mybidbackend.herokuapp.com/images';
     axios.get(url).then(resp => {
       console.log('ITS all Here')
       console.log(resp.data)
